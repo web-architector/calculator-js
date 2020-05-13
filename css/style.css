@@ -1,0 +1,102 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+header {
+    grid-column: span 12;
+    background-color: blue;
+}
+
+
+footer {
+    grid-column: span 12;
+    background-color: violet;
+    width: 100%;
+}
+
+/*изображения визиток*/
+.card-images {
+    grid-column: span 8;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/*калькулятор*/
+.calc {
+    grid-column: span 4;
+    margin-top: 50px;
+    border: 7px solid #1267ae;
+    border-radius: 10px;
+    background-color: #a6e1ec;
+    padding: 20px 40px;
+}
+
+/*Bootstrap analog styles*/
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+#final_price {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.hide-image {
+    display: none;
+}
+
+.show-slow {
+    display: inline-block;
+    opacity: 0;
+
+    animation: fadeIn 2s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*добавляем адаптивность*/
+@media screen and (max-width: 768px) {
+    .calc {
+        grid-column: span 6;
+    }
+
+    .card-images {
+        grid-column: span 6;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .calc {
+        grid-column: span 12;
+    }
+
+    .card-images {
+        grid-column: span 12;
+    }
+}
